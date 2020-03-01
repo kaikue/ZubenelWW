@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Checkpoint
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - LevelGeometry
+  - 
+  - Background
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 2369134529
+    locked: 0
+  - name: Midground
+    uniqueID: 2785016537
+    locked: 0
+  - name: Scenery
+    uniqueID: 2820174213
+    locked: 0
+  - name: StarGlow
+    uniqueID: 3993022053
+    locked: 0
+  - name: Tiles
+    uniqueID: 2393061011
+    locked: 0
+  - name: StarParticles
+    uniqueID: 2615949655
+    locked: 0
+  - name: Stars
+    uniqueID: 411879393
+    locked: 0
+  - name: Player
+    uniqueID: 1020628107
+    locked: 0
+  - name: Overlay
+    uniqueID: 1668044003
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
