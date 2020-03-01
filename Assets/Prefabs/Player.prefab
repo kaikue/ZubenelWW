@@ -4912,8 +4912,8 @@ MonoBehaviour:
   rollSound: {fileID: 8300000, guid: 94ff70b537019ba409ae7e4a8b0ed51b, type: 3}
   skidSound: {fileID: 0}
   bounceSound: {fileID: 0}
-  starCollectSound: {fileID: 0}
-  oldStarCollectSound: {fileID: 0}
+  starCollectSound: {fileID: 8300000, guid: 8cfa43563b6cde14aa7cfcce6e36cb9a, type: 3}
+  oldStarCollectSound: {fileID: 8300000, guid: 71d1b02cf1917bf4383507b06e263d85, type: 3}
   deathSound: {fileID: 0}
   rollTrailPrefab: {fileID: 1430754153617790, guid: 203c705c4e27e0e4d8e78b3fd3797682,
     type: 3}

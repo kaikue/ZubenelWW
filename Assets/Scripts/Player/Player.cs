@@ -342,12 +342,13 @@ public class Player : MonoBehaviour
 
 	public void PlayJumpSound()
 	{
-		audioSrc.pitch = UnityEngine.Random.Range(2 - PITCH_VARIATION, 2 + PITCH_VARIATION);
+		//audioSrc.pitch = UnityEngine.Random.Range(1 - PITCH_VARIATION, 1 + PITCH_VARIATION);
 		audioSrc.PlayOneShot(jumpSound);
 	}
 
 	public void PlayRollSound()
 	{
+		//audioSrc.pitch = UnityEngine.Random.Range(1 - PITCH_VARIATION, 1 + PITCH_VARIATION);
 		audioSrc.PlayOneShot(rollSound);
 	}
 

@@ -125,11 +125,8 @@ public class PlayerLand : PlayerMovement
 			{
 				WallJump(input, ref velocity);
 			}
-
-			if (!IsRolling())
-			{
-				Fall(ref velocity);
-			}
+			
+			Fall(ref velocity);
 		}
 
 		if (!input.jumpQueued) //in case the player is about to jump, in which case their jump should be cut short

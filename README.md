@@ -3,9 +3,10 @@
 ## To Do
 
 - Lengthen roll trail
-- Fix player particles
-- Fix camera lookahead- player velocity wrong?
 - Stars -> suns
+- Figure out slime mechanic- midair bounce? something icy?
+- Ice/snow mechanics
+- Camera sometimes snaps to player being centered in dead zone?
 
 ## Credits
 
