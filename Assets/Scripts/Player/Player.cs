@@ -33,10 +33,10 @@ public class Player : MonoBehaviour
 	private const float HURTZONE_WIDTH_FACTOR = 0.7f; //width of squish collider as factor of normal collider (should be between 0 and 1)
 	private const float HURTZONE_HEIGHT_FACTOR = 0.5f; //height of squish collider as factor of normal collider (should be between 0 and 1)
 
-	private const int NUM_RUN_FRAMES = 20;
+	private const int NUM_RUN_FRAMES = 10;
 	private const int NUM_ROLL_FRAMES = 4;
 
-	private const float RUN_FRAME_TIME = 0.02f; //time in seconds per frame of run animation
+	private const float RUN_FRAME_TIME = 0.05f; //time in seconds per frame of run animation
 	private const float ROLL_FRAME_TIME = 0.1f; //time in seconds per frame of roll animation
 
 	private const float TRAIL_BETWEEN_TIME = 0.05f; //time in seconds between roll trail echoes

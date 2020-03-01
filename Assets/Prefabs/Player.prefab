@@ -4864,7 +4864,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776542791216156}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4, y: -1.03, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4239297252355670}
@@ -4889,7 +4889,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4d4908b742966ba4e80395cd8ea06015, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -4908,14 +4908,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteObject: {fileID: 1061453982016600}
   hurtZone: {fileID: 1863970169773538}
-  jumpSound: {fileID: 0}
-  rollSound: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: c78d72ea6b0a0a4429ec1a7c15c6527d, type: 3}
+  rollSound: {fileID: 8300000, guid: 94ff70b537019ba409ae7e4a8b0ed51b, type: 3}
   skidSound: {fileID: 0}
   bounceSound: {fileID: 0}
   starCollectSound: {fileID: 0}
   oldStarCollectSound: {fileID: 0}
   deathSound: {fileID: 0}
-  rollTrailPrefab: {fileID: 0}
+  rollTrailPrefab: {fileID: 1430754153617790, guid: 203c705c4e27e0e4d8e78b3fd3797682,
+    type: 3}
   ec: {fileID: 0}
   rb: {fileID: 0}
   sr: {fileID: 0}

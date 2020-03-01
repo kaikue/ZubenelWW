@@ -1,5 +1,12 @@
 # Zubenel: Winter Wanderlust
 
+## To Do
+
+- Lengthen roll trail
+- Fix player particles
+- Fix camera lookahead- player velocity wrong?
+- Stars -> suns
+
 ## Credits
 
 ### Fonts

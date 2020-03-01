@@ -56,7 +56,7 @@ public class PlayerLand : PlayerMovement
 	private bool canRoll = true;
 	private int rollDir = 1; //-1 for left, 1 for right
 
-	private float normalHeight;
+	private readonly float normalHeight;
 	private bool rollingCollider = false;
 
 	private Vector2 groundNormal;
@@ -230,8 +230,9 @@ public class PlayerLand : PlayerMovement
 			left = player.facingLeft;
 		}
 
-		player.sr.flipX = left; //change this if sprites face left
-		int xSign = left ? 1 : -1; //change this if sprites face left
+		bool flip = !left; //change this if sprites face right
+		player.sr.flipX = flip;
+		int xSign = flip ? 1 : -1;
 		Vector3 spritePos = player.sr.transform.localPosition;
 		spritePos.x = Mathf.Abs(spritePos.x) * xSign;
 		player.sr.transform.localPosition = spritePos;
