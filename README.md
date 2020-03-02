@@ -2,11 +2,11 @@
 
 ## To Do
 
-- Lengthen roll trail
 - Stars -> suns
 - Figure out slime mechanic- midair bounce? something icy?
 - Ice/snow mechanics
 - Camera sometimes snaps to player being centered in dead zone?
+	- something to do with holding/releasing space, A, and D
 
 ## Credits
 

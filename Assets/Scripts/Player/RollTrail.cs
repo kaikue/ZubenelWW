@@ -5,7 +5,7 @@ using UnityEngine;
 public class RollTrail : MonoBehaviour
 {
 
-	private const float FADE_TIME = 0.4f;
+	private const float FADE_TIME = 1.0f;
 
 	public AnimationCurve fadeCurve;
 
