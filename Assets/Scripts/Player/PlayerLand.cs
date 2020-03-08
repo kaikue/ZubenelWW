@@ -665,8 +665,11 @@ public class PlayerLand : PlayerMovement
 		SlimeBouncer bouncer = other.GetComponent<SlimeBouncer>();
 		if (bouncer != null)
 		{
-			float bounce = Mathf.Max(SlimeBouncer.bounceSpeed, -rb.velocity.y);
+			float bounce = SlimeBouncer.bounceSpeed; //Mathf.Max(SlimeBouncer.bounceSpeed, -rb.velocity.y);
 			rb.velocity = new Vector2(rb.velocity.x, bounce);
+
+			StopRoll();
+			canRoll = true;
 
 			//prevent jump-release-braking the slime bounce
 			canJumpRelease = false;

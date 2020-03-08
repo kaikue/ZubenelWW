@@ -6,7 +6,7 @@ public class SlimeBouncer : MonoBehaviour
 {
 	private const float EXPIRE_TIME = 2.0f;
 	private const float SPEED = 15.0f;
-	public const float bounceSpeed = 12.0f;
+	public const float bounceSpeed = 15.0f;
 
 	private PlayerLand playerLand;
 	private GameObject playerObj;

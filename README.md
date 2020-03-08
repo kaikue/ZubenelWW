@@ -4,14 +4,14 @@
 
 - Stars -> suns
 - Slime mechanics
-	- when bouncing: stop roll, recharge roll
 	- smash ice
 	- travel over spikes
 	- bounce on geysers
 - Ice/snow mechanics
 - When hitting opposite wall, cancel walljump push
 - Camera sometimes snaps to player being centered in dead zone?
-	- try upgrading cinemachine
+	- caused by jiggling just slightly out of soft zone
+- Fix HUD overlay
 
 ## Credits
 

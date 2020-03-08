@@ -4913,7 +4913,7 @@ MonoBehaviour:
   jumpSound: {fileID: 8300000, guid: c78d72ea6b0a0a4429ec1a7c15c6527d, type: 3}
   rollSound: {fileID: 8300000, guid: 94ff70b537019ba409ae7e4a8b0ed51b, type: 3}
   skidSound: {fileID: 0}
-  bounceSound: {fileID: 0}
+  bounceSound: {fileID: 8300000, guid: 497514d043da0f5439e1ce18bf11558d, type: 3}
   starCollectSound: {fileID: 8300000, guid: 8cfa43563b6cde14aa7cfcce6e36cb9a, type: 3}
   oldStarCollectSound: {fileID: 8300000, guid: 71d1b02cf1917bf4383507b06e263d85, type: 3}
   deathSound: {fileID: 0}
