@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Checkpoint
+  - SlimeBouncer
+  - Slime
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - 
   - 
   - LevelGeometry
-  - 
+  - Slime
   - Background
   - 
   - 

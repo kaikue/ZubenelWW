@@ -10,6 +10,7 @@ public class PlayerInput
 	public bool rollQueued = false;
 	public bool rollReleaseQueued = false;
 	public bool triggerWasHeld = false;
+	public bool slimeQueued = false;
 
 	public Coroutine crtCancelQueuedJump;
 	private const float JUMP_BUFFER_TIME = 0.1f; //time before hitting ground a jump will still be queued
@@ -46,6 +47,11 @@ public class PlayerInput
 			rollReleaseQueued = true;
 		}
 		triggerWasHeld = triggerHeld;
+
+		if (Input.GetButtonDown("Slime"))
+		{
+			slimeQueued = true;
+		}
 	}
 
 	public void StopCancelQueuedJump(Player player)

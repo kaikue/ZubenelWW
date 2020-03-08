@@ -3,10 +3,15 @@
 ## To Do
 
 - Stars -> suns
-- Figure out slime mechanic- midair bounce? something icy?
+- Slime mechanics
+	- when bouncing: stop roll, recharge roll
+	- smash ice
+	- travel over spikes
+	- bounce on geysers
 - Ice/snow mechanics
+- When hitting opposite wall, cancel walljump push
 - Camera sometimes snaps to player being centered in dead zone?
-	- something to do with holding/releasing space, A, and D
+	- try upgrading cinemachine
 
 ## Credits
 

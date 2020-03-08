@@ -1,5 +1,4 @@
-﻿using Cinemachine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,15 +14,6 @@ public abstract class PlayerMovement
 		this.player = player;
 		rb = player.rb;
 		ec = player.ec;
-
-		CinemachineVirtualCamera vcam = Camera.main.gameObject.GetComponentInChildren<CinemachineVirtualCamera>();
-		CinemachineFramingTransposer body = vcam.GetCinemachineComponent<CinemachineFramingTransposer>();
-		SetCamera(body);
-	}
-
-	public virtual void SetCamera(CinemachineFramingTransposer body)
-	{
-		
 	}
 
 	public abstract void Move(PlayerInput input);

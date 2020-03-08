@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
 {
 	public GameObject spriteObject;
 	public GameObject hurtZone;
+	public Transform slimeSpot;
 
 	public AudioClip jumpSound;
 	public AudioClip rollSound;
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour
 	public AudioClip deathSound;
 
 	public GameObject rollTrailPrefab;
+	public GameObject slimePrefab;
 
 	private const float THROW_X_FACTOR = 75.0f; //velocity x multiplier for throwing a grabbable object
 	private const float THROW_Y_SPEED = 100.0f; //velocity y addition for throwing a grabbable object

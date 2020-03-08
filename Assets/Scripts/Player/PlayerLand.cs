@@ -1,5 +1,4 @@
-﻿using Cinemachine;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -65,19 +64,13 @@ public class PlayerLand : PlayerMovement
 
 	private bool shouldStand = false;
 
+	private GameObject slimeObj;
+
 	public PlayerLand(Player player) : base(player)
 	{
 		normalHeight = ec.points[1].y - ec.points[0].y;
 	}
-
-	public override void SetCamera(CinemachineFramingTransposer body)
-	{
-		body.m_LookaheadIgnoreY = true;
-		body.m_ScreenY = 0.6f;
-		body.m_DeadZoneHeight = 0.1f;
-		body.m_BiasY = -0.1f;
-	}
-
+	
 	public override void Move(PlayerInput input)
 	{
 		Vector2 velocity = rb.velocity; //for changing the player's actual velocity
@@ -125,7 +118,7 @@ public class PlayerLand : PlayerMovement
 			{
 				WallJump(input, ref velocity);
 			}
-			
+
 			Fall(ref velocity);
 		}
 
@@ -178,6 +171,17 @@ public class PlayerLand : PlayerMovement
 				shouldStand = false;
 			}
 		}
+
+		if (input.slimeQueued && slimeObj == null)
+		{
+			RaycastHit2D[] hits = Physics2D.RaycastAll(player.slimeSpot.position, Vector2.down, 0, LayerMask.GetMask("LevelGeometry"));
+			if (hits.Length == 0)
+			{
+				slimeObj = GameObject.Instantiate(player.slimePrefab, player.slimeSpot.position, Quaternion.identity);
+				slimeObj.GetComponent<SlimeBouncer>().SetPlayer(this, player.gameObject);
+			}
+		}
+		input.slimeQueued = false;
 
 		if (input.rollQueued && canRoll)
 		{
@@ -658,6 +662,20 @@ public class PlayerLand : PlayerMovement
 
 		GameObject other = collision.gameObject;
 
+		SlimeBouncer bouncer = other.GetComponent<SlimeBouncer>();
+		if (bouncer != null)
+		{
+			float bounce = Mathf.Max(SlimeBouncer.bounceSpeed, -rb.velocity.y);
+			rb.velocity = new Vector2(rb.velocity.x, bounce);
+
+			//prevent jump-release-braking the slime bounce
+			canJumpRelease = false;
+			player.PlayBounceSound();
+
+			GameObject.Destroy(other);
+			slimeObj = null;
+		}
+
 		Slime slime = other.GetComponent<Slime>();
 		if (slime != null)
 		{
@@ -769,5 +787,10 @@ public class PlayerLand : PlayerMovement
 
 		RemoveContact(grounds, collision.gameObject, LeaveGround());
 		crtLeaveWall = RemoveContact(walls, collision.gameObject, LeaveWall());
+	}
+
+	public void DestroySlime()
+	{
+		this.slimeObj = null;
 	}
 }
