@@ -307,11 +307,11 @@ public class Player : MonoBehaviour
 			}
 		}
 
-		Door door = other.GetComponent<Door>();
-		if (door != null)
+		Portal portal = other.GetComponent<Portal>();
+		if (portal != null)
 		{
-			gm.ShowHUDDoorStars(door);
-			door.TryOpen();
+			gm.ShowHUDPortalStars(portal);
+			portal.TryActivate();
 		}
 
 		PowerUp powerUp = other.GetComponent<PowerUp>();

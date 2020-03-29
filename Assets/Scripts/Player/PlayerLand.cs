@@ -532,6 +532,7 @@ public class PlayerLand : PlayerMovement
 
 	private void HitWall(int newWallSide)
 	{
+		Debug.Log("hit wall " + newWallSide);
 		wallSide = newWallSide;
 		lastWallSide = newWallSide;
 
@@ -765,11 +766,15 @@ public class PlayerLand : PlayerMovement
 		ContactPoint2D? wallPoint = GetWall(collision);
 		if (wallPoint.HasValue && !IsOneWayPlatform(collision))
 		{
+			int newWallSide = GetWallSide(wallPoint.Value);
 			if (!walls.Contains(collision.gameObject))
 			{
 				walls.Add(collision.gameObject);
 
-				int newWallSide = GetWallSide(wallPoint.Value);
+				HitWall(newWallSide);
+			}
+			else if (newWallSide != lastWallSide)
+			{
 				HitWall(newWallSide);
 			}
 		}

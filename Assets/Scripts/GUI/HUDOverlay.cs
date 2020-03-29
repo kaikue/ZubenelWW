@@ -4,43 +4,28 @@ using UnityEngine.UI;
 
 public class HUDOverlay : MonoBehaviour
 {
-
 	public GameObject canvas;
-	public GameObject[] contents;
+	public GameObject content;
 
 	private const float SLIDE_TIME = 0.5f;
 	private const float HEIGHT_OFFSCREEN = 250;
 	private const float HOLD_TIME = 3.0f;
 
-	private RectTransform[] contentRects;
-	private float[] contentGoalsY;
+	private RectTransform contentRect;
+	private float contentGoalY;
 
 	private bool showing = true;
 
 	private void Start()
 	{
-		contentRects = new RectTransform[contents.Length];
-		contentGoalsY = new float[contents.Length];
-		for (int i = 0; i < contents.Length; i++)
-		{
-			contentRects[i] = contents[i].GetComponent<RectTransform>();
-			contentGoalsY[i] = contentRects[i].anchoredPosition.y;
-		}
+		contentRect = content.GetComponent<RectTransform>();
+		contentGoalY = contentRect.anchoredPosition.y;
 	}
 
-	public void SetStars(Color[] starColors, int[] starCounts)
+	public void SetStars(Color starColor, int starCount)
 	{
-		foreach (GameObject star in contents)
-		{
-			star.SetActive(false);
-		}
-
-		for (int i = 0; i < starCounts.Length; i++)
-		{
-			contents[i].SetActive(true);
-			contents[i].GetComponentInChildren<Image>().color = starColors[i];
-			contents[i].GetComponentInChildren<Text>().text = "" + starCounts[i];
-		}
+		content.GetComponentInChildren<Image>().color = starColor;
+		content.GetComponentInChildren<Text>().text = "" + starCount;
 	}
 
 	public void Hold()
@@ -68,12 +53,8 @@ public class HUDOverlay : MonoBehaviour
 	{
 		for (float t = 0; t < SLIDE_TIME; t += Time.deltaTime)
 		{
-			for (int i = 0; i < contentRects.Length; i++)
-			{
-				RectTransform contentRect = contentRects[i];
-				float newY = GetInY(contentGoalsY[i], t, isIn);
-				contentRect.anchoredPosition = new Vector2(contentRect.anchoredPosition.x, newY);
-			}
+			float newY = GetInY(contentGoalY, t, isIn);
+			contentRect.anchoredPosition = new Vector2(contentRect.anchoredPosition.x, newY);
 			yield return new WaitForEndOfFrame();
 		}
 		if (isIn)

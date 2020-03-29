@@ -8,10 +8,11 @@
 	- travel over spikes
 	- bounce on geysers
 - Ice/snow mechanics
-- When hitting opposite wall, cancel walljump push
 - Camera sometimes snaps to player being centered in dead zone?
 	- caused by jiggling just slightly out of soft zone
-- Fix HUD overlay
+- Portals
+	- cool shader
+	- fix HUD overlay slide in/out
 
 ## Credits
 

@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
 	public GameObject pauseOverlayPrefab;
 	public GameObject starCollectOverlayPrefab;
 	public GameObject hudOverlayPrefab;
@@ -105,24 +104,16 @@ public class GameManager : MonoBehaviour
 	private void SetHUDLevelStar()
 	{
 		levelStar = levelStarPrefab.GetComponent<Star>();
-		Color[] starColors = new Color[] { levelStar.GetColor() };
-		int[] starCounts = new int[] { starsCollected[(int)levelStar.starType] };
-		hudOverlay.SetStars(starColors, starCounts);
+		hudOverlay.SetStars(levelStar.GetColor(), starsCollected[(int)levelStar.starType]);
 	}
 
-	public void ShowHUDDoorStars(Door door)
+	public void ShowHUDPortalStars(Portal portal)
 	{
-		GameObject[] doorStars = door.starsRequiredPrefabs;
-		Color[] starColors = new Color[doorStars.Length];
-		int[] starCounts = new int[doorStars.Length];
-		for (int i = 0; i < doorStars.Length; i++)
-		{
-			Star star = doorStars[i].GetComponent<Star>();
-			starColors[i] = star.GetColor();
-			starCounts[i] = starsCollected[(int)star.starType];
-		}
-
-		hudOverlay.SetStars(starColors, starCounts);
+		GameObject portalStar = portal.starRequiredPrefab;
+		Star star = portalStar.GetComponent<Star>();
+		Color starColor = star.GetColor();
+		int starCount = starsCollected[(int)star.starType];
+		hudOverlay.SetStars(starColor, starCount);
 		hudOverlay.SlideIn();
 	}
 
