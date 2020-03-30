@@ -9,7 +9,7 @@ public class HUDOverlay : MonoBehaviour
 
 	private const float SLIDE_TIME = 0.5f;
 	private const float HEIGHT_OFFSCREEN = 250;
-	private const float HOLD_TIME = 3.0f;
+	private const float HOLD_TIME = 1.0f;
 
 	private RectTransform contentRect;
 	private float contentGoalY;

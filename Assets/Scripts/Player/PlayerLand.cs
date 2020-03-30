@@ -532,7 +532,6 @@ public class PlayerLand : PlayerMovement
 
 	private void HitWall(int newWallSide)
 	{
-		Debug.Log("hit wall " + newWallSide);
 		wallSide = newWallSide;
 		lastWallSide = newWallSide;
 

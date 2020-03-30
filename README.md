@@ -9,10 +9,13 @@
 	- bounce on geysers
 - Ice/snow mechanics
 - Camera sometimes snaps to player being centered in dead zone?
-	- caused by jiggling just slightly out of soft zone
+	- jump, quickly tap A, quickly tap D
 - Portals
-	- cool shader
-	- fix HUD overlay slide in/out
+	- what should it look like when inactive?
+	- activation fx
+	- swooshy sound
+	- bigger trigger for showing required stars, smaller for entering
+	- entering fx (sucked in, fade screen)
 
 ## Credits
 
