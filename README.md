@@ -8,14 +8,58 @@
 	- travel over spikes
 	- bounce on geysers
 - Ice/snow mechanics
-- Camera sometimes snaps to player being centered in dead zone?
-	- jump, quickly tap A, quickly tap D
+	- icy lake slides you? make sure it is actually fun
+	- icy mountain slopes are hard to climb?
+	- sticky snow?
 - Portals
-	- what should it look like when inactive?
+	- what should it look like when inactive? gray oval?
 	- activation fx
-	- swooshy sound
 	- bigger trigger for showing required stars, smaller for entering
 	- entering fx (sucked in, fade screen)
+- Sounds
+	- Shine
+		- near: fire crackle
+		- get: bloop?
+		- re-get: ding?
+	- Portal
+		- open: vwoosh
+		- near: hum
+	- Levels
+		- music
+			- title
+			- storybook
+			- forest
+			- aurora lake
+			- mountain climb
+			- sun core
+			- storybook again
+		- field recordings
+- Art
+	- Zubenel winter jacket
+	- Sun (star replacement)
+		- more beams in shader
+	- Tiles
+		- Snow
+		- Ice
+		- Dirt
+		- Tree trunk
+		- Tree leaf
+		- Fragile ice
+	- Backgrounds
+		- forest
+		- aurora borealis
+		- foggy mountain
+		- space
+	- Decorations
+		- trees
+		- flowers
+		- icicles
+		- snow piles
+		- rocks
+		- snowman
+	- Particles
+		- snowy walk trail
+		- sun embers
 
 ## Credits
 

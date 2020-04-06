@@ -13,7 +13,7 @@ public class CameraMix : MonoBehaviour
 	private const float CLOSEST_DISTANCE = 2.5f; //distance at which to stop zooming
 	private const float LERP_AMOUNT = 2.0f; //factor to zoom out after collecting star
 
-	private Transform player;
+	private Transform playerLook;
 	private Star nearestStar;
 	private Star[] stars;
 	private float closestDistance;
@@ -21,8 +21,8 @@ public class CameraMix : MonoBehaviour
 
 	private void Start()
 	{
-		player = GameObject.FindGameObjectWithTag("Player").transform;
-		playerCam.m_Follow = player;
+		playerLook = GameObject.FindGameObjectWithTag("Player").transform.Find("Lookahead");
+		playerCam.m_Follow = playerLook;
 		stars = FindObjectsOfType<Star>();
 		UpdateNearestStar();
 	}
@@ -48,7 +48,7 @@ public class CameraMix : MonoBehaviour
 		{
 			if (!star.WasCollected())
 			{
-				float distance = Vector3.Distance(star.transform.position, player.position);
+				float distance = Vector3.Distance(star.transform.position, playerLook.position);
 				if (distance < closestDistance || closestDistance < 0) //closestDistance is negative = first star
 				{
 					closestDistance = distance;
